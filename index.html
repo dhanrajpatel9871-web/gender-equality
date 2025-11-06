@@ -1,40 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gender Equality Awareness - Home</title>
-  <link rel="stylesheet" href="web.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gender Equality Awareness</title>
+  <meta name="description" content="Resources, statistics and initiatives to promote gender equality.">
+  <link rel="stylesheet" href="web.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="statistics.html">Statistics</a></li>
-      <li><a href="initiatives.html">Initiatives</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="container">
-    <h1>Welcome to Gender Equality Awareness</h1>
-    <p>
-      Gender equality means that individuals of all genders have equal rights,
-      responsibilities, and opportunities. This website aims to raise awareness
-      about the importance of gender equality worldwide.
-    </p>
-    <div class="toggle-container">
-      <label class="toggle-switch" for="facts-toggle">
-        <input type="checkbox" id="facts-toggle" />
-        <span class="slider"></span>
-      </label>
-      <p>Toggle to see a gender equality fact or quote</p>
-      <div class="fact-box" id="fact-box"></div>
+  <header>
+    <div class="header-inner" role="banner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">GE</div>
+        <div>
+          <div style="font-size:0.9rem">Gender Equality</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.9)">Awareness</div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation">☰</button>
+
+      <nav id="mainNav" role="navigation" aria-label="Main">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="home-heading">
+      <div class="lead">
+        <h1 id="home-heading">Promote gender equality — learn, act, share</h1>
+        <p class="kicker">Resources, statistics and initiatives to support equal opportunities and rights.</p>
+      </div>
+      <div style="min-width:240px">
+        <a class="btn" href="initiatives.html">Explore Initiatives</a>
+      </div>
+    </section>
+
+    <section class="cards" aria-label="Quick links">
+      <article class="card">
+        <h3>About</h3>
+        <p>Learn about our mission, history and ways to get involved.</p>
+        <p><a href="about.html">Read more →</a></p>
+      </article>
+      <article class="card">
+        <h3>Statistics</h3>
+        <p>Key figures and research that highlight gaps and progress.</p>
+        <p><a href="statistics.html">View statistics →</a></p>
+      </article>
+      <article class="card">
+        <h3>Initiatives</h3>
+        <p>Programs and partners driving change in communities.</p>
+        <p><a href="initiatives.html">See initiatives →</a></p>
+      </article>
+    </section>
+  </main>
+
   <footer>
-    &copy; 2025 Gender Equality Awareness. All rights reserved.
+    &copy; 2025 Gender Equality Awareness. <a href="contact.html">Contact</a>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,42 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us - Gender Equality Awareness</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Gender Equality Awareness</title>
   <link rel="stylesheet" href="web.css" />
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="statistics.html">Statistics</a></li>
-      <li><a href="initiatives.html">Initiatives</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="container">
-    <h1>Contact Us</h1>
-    <form id="contact-form" novalidate>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required minlength="3" />
-      <div class="error" id="name-error"></div>
+  <header>
+    <div class="header-inner" role="banner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">GE</div>
+        <div>
+          <div style="font-size:0.9rem">Gender Equality</div>
+        </div>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-      <div class="error" id="email-error"></div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation">☰</button>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
-      <div class="error" id="message-error"></div>
+      <nav id="mainNav" role="navigation" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-  </div>
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="contact-heading">
+      <div class="lead">
+        <h1 id="contact-heading">Contact Us</h1>
+        <p class="kicker">Questions, partnerships, or feedback — get in touch.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-heading" style="margin-top:18px">
+      <h2 id="form-heading">Send a message</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" minlength="3" required aria-required="true" />
+        <div class="error" id="name-error" aria-live="polite"></div>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required aria-required="true" />
+        <div class="error" id="email-error" aria-live="polite"></div>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" minlength="10" required aria-required="true"></textarea>
+        <div class="error" id="message-error" aria-live="polite"></div>
+
+        <button type="submit" class="submit-btn btn">Send Message</button>
+        <div id="form-success" style="margin-top:12px;color:green;display:none" role="status" aria-live="polite">Message sent (demo only).</div>
+      </form>
+    </section>
+  </main>
+
   <footer>
-    &copy; 2025 Gender Equality Awareness. All rights reserved.
+    &copy; 2025 Gender Equality Awareness.
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
